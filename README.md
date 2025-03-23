@@ -1,66 +1,14 @@
-## Foundry
+## Uniswap v4 Auto Rebalancing Hook
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
-
-Foundry consists of:
-
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+**Uniswap v4 hook that automatically rebalances liquidity pools based on market conditions and adjusts fees dynamically to optimize returns for liquidity providers (LPs)**
 
 ## Documentation
 
-https://book.getfoundry.sh/
+**The Auto-Rebalancing Hook has three core capabilities:**
+**Real-time Market Monitoring:** It tracks price volatility, trading volume, and liquidity depth to understand current market conditions.
+**Automatic Liquidity Rebalancing:** The hook shifts liquidity to concentrate around the current price, optimizing capital efficiency without requiring manual intervention.
+**Dynamic Fee Adjustment:** Fees automatically increase during high volatility or high demand periods, protecting LPs from impermanent loss and maximizing returns.
 
-## Usage
 
-### Build
 
-```shell
-$ forge build
-```
 
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
